@@ -1,19 +1,26 @@
 {
-	"name": "instagram",
+	"name": "render-json-server",
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "json-server",
+		"start": "node index.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/geetesh-g/Instagram"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/UmaSahni/render-json-server/issues"
+	},
+	"homepage": "https://github.com/UmaSahni/render-json-server#readme",
 	"dependencies": {
 		"cors": "^2.8.5",
-		"glob-parent": "^6.0.2",
 		"json-serve": "^0.1.0",
-		"json-server": "^1.0.0-beta.0"
+		"json-server": "^0.17.1"
 	}
 }
