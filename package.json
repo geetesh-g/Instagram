@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "glob-parent": "^6.0.2",
     "json-serve": "^0.1.0",
     "json-server": "^1.0.0-beta.0"
   }
