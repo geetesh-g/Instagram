@@ -1,0 +1,40 @@
+{
+  "posts": [
+    {
+      "id": "2",
+      "image_url": "https://i.ibb.co/3h9wR26/Iceland.jpg",
+      "caption": "#Mountains"
+    },
+    {
+      "id": "3",
+      "image_url": "https://i.ibb.co/GHYJrf8/IMG-1085-2.jpg",
+      "caption": "#hills",
+      "Id": "3"
+    },
+    {
+      "id": "4",
+      "image_url": "https://i.ibb.co/3h9wR26/Iceland.jpg",
+      "caption": "#Mountains"
+    },
+    {
+      "id": "5",
+      "image_url": "https://i.ibb.co/NW4gw5g/Zendaya.jpg",
+      "caption": "#Fav Actress"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

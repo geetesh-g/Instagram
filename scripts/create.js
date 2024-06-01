@@ -100,3 +100,49 @@ const createPost = async () => {
 		console.log(error);
 	}
 };
+
+// to update the post what we need -> post address
+// how can we get that image address ->   url
+// in the url we have send the id of the post -> yes
+// and we will take that id from user -> right
+
+let update_post = document.querySelector("#update_post");
+update_post.onclick = () => {
+	changePost();
+};
+
+let changePost = async () => {
+	try {
+		let Id = document.querySelector("#Id").value;
+		let new_caption = document.querySelector("#new_caption").value;
+
+		let send_this_data = {
+			Id,
+			caption: new_caption,
+		};
+
+		let response = await fetch(`http://localhost:3000/posts/${Id}`, {
+			method: "PATCH",
+			body: JSON.stringify(send_this_data),
+			headers: {
+				"Content-Type": "application.json",
+			},
+		});
+
+		let data = await response.json();
+		console.log(data);
+	} catch (error) {
+		console.log(error);
+	}
+};
+
+let update_section = document.querySelector("#update_section");
+update_section.onclick = () => {
+	let update_div = document.querySelector("#update_div");
+	let create_div = document.querySelector("#create_div");
+
+	create_div.style.display = "none";
+	update_div.style.display = "block";
+	update_div.style.display = "flex";
+	update_div.style.gap = "12px";
+};

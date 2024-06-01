@@ -1,11 +1,25 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
 #navbar {
+	height: 70px;
 	display: flex;
 	justify-content: center;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: #ffffff;
+	color: white;
+	z-index: 1000;
 }
 #navbar div {
 	display: flex;
 	justify-content: center;
-	border: solid 1px black;
+	align-items: center;
 }
 #logo {
 	flex: 2;
@@ -15,6 +29,7 @@
 
 #logo img {
 	width: 30%;
+	margin-left: 20%;
 }
 
 #search {
@@ -26,10 +41,106 @@
 #search input {
 	height: 40%;
 	width: 80%;
+	padding: 8px 12px;
+	border-radius: 10px;
+	border: 1px solid #939393;
+	font-size: 14px;
 }
 
 #options {
 	flex: 3;
 	display: flex;
 	align-items: center;
+}
+
+#submit_btn {
+	padding: 8px 12px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	background: rgb(34, 94, 195);
+	background: linear-gradient(
+		135deg,
+		rgba(34, 94, 195, 1) 20%,
+		rgba(253, 45, 238, 1) 100%
+	);
+	color: #f0ffff;
+	font-weight: 600;
+	cursor: pointer;
+	transition: width ease 0.3s;
+}
+
+#submit_btn:hover {
+	transform: scale(1.1);
+}
+
+#container {
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+	margin: auto;
+	margin-top: 15vh;
+	gap: 5vh;
+}
+#container figure {
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+		rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border-radius: 3px 3px 0px 0px;
+}
+#container img {
+	width: 100%;
+}
+
+#container figcaption {
+	margin: 10px;
+}
+
+#container > #create_div,
+#update_div {
+	width: 35%;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	justify-content: center;
+	box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+		rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+		rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+	padding: 20px;
+	border-radius: 12px;
+	margin: auto;
+}
+
+#container input {
+	padding: 8px 12px;
+	font-size: 14px;
+	border: 1px solid #939393;
+	border-radius: 10px;
+}
+
+#container button {
+	width: 60%;
+	padding: 8px 12px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	cursor: pointer;
+	background: linear-gradient(
+		90deg,
+		rgba(34, 162, 195, 1) 20%,
+		rgba(253, 195, 45, 1) 100%
+	);
+	color: #040036;
+	font-size: 14px;
+	font-weight: 600;
+
+	transition: width ease 0.3s;
+}
+
+#container button:hover {
+	transform: scale(1.1);
+}
+
+#container > #update_div {
+	display: none;
 }

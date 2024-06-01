@@ -11,12 +11,22 @@
 			<nav id="navbar"></nav>
 		</header>
 		<main id="container">
-			<h2>Create Why To Wait</h2>
-			<input type="text" id="id" placeholder="id" />
+			<div id="create_div">
+				<h2>Create Your Post</h2>
+				<input type="text" id="id" placeholder="id" />
+				<input type="text" id="caption" placeholder="Enter caption for image" />
+				<input type="file" id="image" />
+				<button id="create">Create</button>
+				Or
+				<button id="update_section" title="Go to Update Section">Update</button>
+			</div>
 
-			<input type="file" id="image" />
-			<input type="text" id="caption" placeholder="Enter caption for image" />
-			<button id="create">Create</button>
+			<div id="update_div">
+				<h2>Update Post</h2>
+				<input type="text" placeholder="Enter Id" id="Id" />
+				<input type="text" placeholder="Enter New Caption" id="new_caption" />
+				<button id="update_post">Update Post</button>
+			</div>
 		</main>
 	</body>
 	<script src="./scripts/create.js" type="module"></script>

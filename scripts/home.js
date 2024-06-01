@@ -29,7 +29,6 @@ const append = (posts) => {
 		let figCap = document.createElement("figcaption");
 
 		image.src = el.image_url;
-		image.style.width = "40%";
 		figCap.innerText = el.caption;
 
 		figure.append(image, figCap);
