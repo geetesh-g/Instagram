@@ -13,7 +13,7 @@ nav.innerHTML = navbar();
 
 const getData = async () => {
 	try {
-		let response = await fetch(`http://localhost:3000/posts?_start=1&_end=8`);
+		let response = await fetch(`http://localhost:3000/posts?_start=1&_end=5`);
 		let data = await response.json();
 		console.log(data);
 		append(data);

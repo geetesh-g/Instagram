@@ -76,7 +76,7 @@ const handleImg = async () => {
 // first of all we have to take inputs from user
 
 const createPost = async () => {
-	let id = document.querySelector("#id").value;
+	let id = document.querySelector("#create_id").value;
 	let caption = document.querySelector("#caption").value;
 
 	let data_of_user = {
@@ -113,7 +113,7 @@ update_post.onclick = () => {
 
 let changePost = async () => {
 	try {
-		let Id = document.querySelector("#Id").value;
+		let Id = document.querySelector("#update_id").value;
 		let new_caption = document.querySelector("#new_caption").value;
 
 		let send_this_data = {
@@ -145,4 +145,49 @@ update_section.onclick = () => {
 	update_div.style.display = "block";
 	update_div.style.display = "flex";
 	update_div.style.gap = "12px";
+};
+
+// delete section
+// when user clicks on delete button that is shown in creat post part
+// we will display : block property for dlt_div and before that we will display : none the create_div
+// now we have to take image id from user and then iff user clicks on delete post button we have to delete that data present in the server or local server
+
+let delete_section = document.querySelector("#dlt_section");
+delete_section.onclick = () => {
+	let create_div = document.querySelector("#create_div");
+	create_div.style.display = "none";
+
+	let dlt_div = document.querySelector("#dlt_div");
+	dlt_div.style.display = "block";
+	dlt_div.style.display = "flex";
+	dlt_div.style.gap = "12px";
+};
+
+let dlt_btn = document.querySelector("#delete");
+dlt_btn.onclick = () => {
+	dlt_post();
+};
+
+let dlt_post = async () => {
+	try {
+		let Id = document.querySelector("#dlt_id").value;
+		console.log(Id);
+		let send_this_data = {
+			Id,
+		};
+
+		let response = await fetch(`http://localhost:3000/posts/${Id}`, {
+			method: "DELETE",
+			body: JSON.stringify(send_this_data),
+			headers: {
+				"Content-Type": "application.json",
+			},
+		});
+
+		console.log(response);
+		// let res = await response.json();
+		// console.log(res);
+	} catch (error) {
+		console.log(error);
+	}
 };
