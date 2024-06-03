@@ -1,4 +1,4 @@
-import navbar from "../../Insta/components/navbar.js";
+import navbar from "../components/navbar.js";
 
 let nav = document.querySelector("#navbar");
 nav.innerHTML = navbar();
@@ -13,7 +13,9 @@ nav.innerHTML = navbar();
 
 const getData = async () => {
 	try {
-		let response = await fetch(`http://localhost:3000/posts?_start=1&_end=5`);
+		let response = await fetch(
+			`https://instagram-3.onrender.com//posts?_start=1&_end=5`
+		);
 		let data = await response.json();
 		console.log(data);
 		append(data);

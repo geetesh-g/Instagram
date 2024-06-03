@@ -86,7 +86,7 @@ const createPost = async () => {
 	};
 
 	try {
-		let response = await fetch(`http://localhost:3000/posts`, {
+		let response = await fetch(`https://instagram-3.onrender.com//posts`, {
 			method: "POST",
 			body: JSON.stringify(data_of_user),
 			headers: {
@@ -121,13 +121,16 @@ let changePost = async () => {
 			caption: new_caption,
 		};
 
-		let response = await fetch(`http://localhost:3000/posts/${Id}`, {
-			method: "PATCH",
-			body: JSON.stringify(send_this_data),
-			headers: {
-				"Content-Type": "application.json",
-			},
-		});
+		let response = await fetch(
+			`https://instagram-3.onrender.com//posts/${Id}`,
+			{
+				method: "PATCH",
+				body: JSON.stringify(send_this_data),
+				headers: {
+					"Content-Type": "application.json",
+				},
+			}
+		);
 
 		let data = await response.json();
 		console.log(data);
@@ -176,13 +179,16 @@ let dlt_post = async () => {
 			Id,
 		};
 
-		let response = await fetch(`http://localhost:3000/posts/${Id}`, {
-			method: "DELETE",
-			body: JSON.stringify(send_this_data),
-			headers: {
-				"Content-Type": "application.json",
-			},
-		});
+		let response = await fetch(
+			`https://instagram-3.onrender.com//posts/${Id}`,
+			{
+				method: "DELETE",
+				body: JSON.stringify(send_this_data),
+				headers: {
+					"Content-Type": "application.json",
+				},
+			}
+		);
 
 		console.log(response);
 		// let res = await response.json();
