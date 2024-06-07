@@ -1,6 +1,6 @@
 const navbar = () => {
 	return `<div id="logo">
-  <a href="./home.html">
+  <a href="./index.html">
     <img
       src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png"
       alt=""

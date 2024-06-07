@@ -27,12 +27,20 @@
 	text-decoration: underline;
 }
 
-#container > #page_div {
+footer {
+	width: 40%;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 5vh;
+}
+
+#page_div {
 	display: flex;
 	gap: 5px;
 	margin: auto;
 }
 
-#container > #page_div button {
+#page_div button {
 	cursor: pointer;
 }
