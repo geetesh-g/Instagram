@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Create_Post</title>
+		<link rel="stylesheet" href="./styles/common.css" />
+		<link rel="stylesheet" href="./styles/create.css" />
+	</head>
+	<body>
+		<header>
+			<nav id="navbar"></nav>
+		</header>
+		<main id="container">
+			<form class="operations" id="create_div">
+				<h2>Create Your Post</h2>
+				<input type="text" id="create_id" placeholder="Enter id" required />
+				<input type="text" id="caption" placeholder="Enter caption for image" />
+				<input type="file" id="image" />
+				<button id="create">Create</button>
+				<button id="update_section" title="Go to Update Section">Update</button>
+				<button id="dlt_section">Delete</button>
+			</form>
+
+			<div class="operations" id="update_div">
+				<h2>Update Post</h2>
+				<input type="text" placeholder="Enter Id" id="update_id" />
+				<input type="text" placeholder="Enter New Caption" id="new_caption" />
+				<button id="update_post">Update Post</button>
+			</div>
+
+			<div class="operations" id="dlt_div">
+				<h2>Delete Post</h2>
+				<input type="text" id="dlt_id" placeholder="Enter id" required />
+				<button id="delete">Delete Post</button>
+			</div>
+		</main>
+	</body>
+	<script src="./scripts/create.js" type="module"></script>
+</html>

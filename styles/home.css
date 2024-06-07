@@ -1,0 +1,38 @@
+#container {
+	text-align: center;
+}
+#container figure {
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+		rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border-radius: 3px 3px 0px 0px;
+}
+#container img {
+	width: 100%;
+}
+
+#container figcaption {
+	margin: 10px;
+}
+
+#container {
+	padding-bottom: 20px;
+}
+#container > p {
+	font-size: 14px;
+	font-weight: 500;
+	color: rgb(0, 85, 255);
+	text-decoration: underline;
+}
+
+#container > #page_div {
+	display: flex;
+	gap: 5px;
+	margin: auto;
+}
+
+#container > #page_div button {
+	cursor: pointer;
+}
