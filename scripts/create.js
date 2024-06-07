@@ -90,7 +90,7 @@ const createPost = async () => {
 	};
 
 	try {
-		let response = await fetch(`https://instagram-3.onrender.com/posts`, {
+		let response = await fetch(`https://instagram-4tcb.onrender.com/posts`, {
 			method: "POST",
 			body: JSON.stringify(data_of_user),
 			headers: {
@@ -125,13 +125,16 @@ let changePost = async () => {
 			caption: new_caption,
 		};
 
-		let response = await fetch(`https://instagram-3.onrender.com/posts/${id}`, {
-			method: "PATCH",
-			body: JSON.stringify(send_this_data),
-			headers: {
-				"Content-Type": "application/json",
-			},
-		});
+		let response = await fetch(
+			`https://instagram-4tcb.onrender.com/posts/${id}`,
+			{
+				method: "PATCH",
+				body: JSON.stringify(send_this_data),
+				headers: {
+					"Content-Type": "application/json",
+				},
+			}
+		);
 
 		let data = await response.json();
 		console.log(data);
@@ -175,12 +178,15 @@ dlt_btn.onclick = () => {
 let dlt_post = async () => {
 	try {
 		let id = document.querySelector("#dlt_id").value;
-		let response = await fetch(`https://instagram-3.onrender.com/posts/${id}`, {
-			method: "DELETE",
-			headers: {
-				"Content-Type": "application/json",
-			},
-		});
+		let response = await fetch(
+			`https://instagram-4tcb.onrender.com/posts/${id}`,
+			{
+				method: "DELETE",
+				headers: {
+					"Content-Type": "application/json",
+				},
+			}
+		);
 
 		let res = await response.json();
 		console.log(res);

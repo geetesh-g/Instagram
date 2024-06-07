@@ -11,41 +11,6 @@ nav.innerHTML = navbar();
 
 */
 
-const updatePostId = async () => {
-	try {
-		// Fetch all posts
-		let response = await fetch("https://instagram-3.onrender.com/posts");
-		let posts = await response.json();
-
-		// Find the post with an empty ID and update it
-		for (let post of posts) {
-			if (post.id === "") {
-				await fetch(`https://instagram-3.onrender.com/posts/${post.id}`, {
-					method: "PUT",
-					headers: {
-						"Content-Type": "application/json",
-					},
-					body: JSON.stringify({ id: 1 }), // Assign a temporary ID
-				});
-
-				// Now delete the post with the temporary ID
-				await fetch(`https://instagram-3.onrender.com/posts/1`, {
-					method: "DELETE",
-				});
-
-				console.log("Post with empty ID updated and deleted successfully.");
-				return;
-			}
-		}
-
-		console.log("No post with an empty ID found.");
-	} catch (error) {
-		console.error("Error updating and deleting post:", error);
-	}
-};
-
-updatePostId();
-
 const append = (posts) => {
 	posts.forEach((el) => {
 		let figure = document.createElement("figure");
@@ -63,7 +28,7 @@ const append = (posts) => {
 const paginated = async (clicked_button, limit) => {
 	try {
 		let response = await fetch(
-			`https://instagram-3.onrender.com/posts?_page=${clicked_button}&_per_page=${limit}_`
+			`https://instagram-4tcb.onrender.com/posts?_page=${clicked_button}&_per_page=${limit}_`
 		);
 		let data = await response.json();
 		console.log(data);
@@ -95,7 +60,7 @@ let createButtons = (data_length, limit) => {
 const getData = async () => {
 	try {
 		let response = await fetch(
-			`https://instagram-3.onrender.com/posts?_start=0&_limit=10_`
+			`https://instagram-4tcb.onrender.com/posts?_start=0&_limit=10_`
 		);
 		let data = await response.json();
 		console.log(data);
